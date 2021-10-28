@@ -1,1 +1,152 @@
-@import url("https://fonts.googleapis.com/css2?family=Arsenal:wght@400;700&family=PT+Sans+Caption:wght@400;700&family=PT+Sans:wght@400;700&display=swap");body,html{height:5000px;margin:0;padding:0}header{position:fixed;height:75px;width:100%;display:-webkit-box;display:-ms-flexbox;display:flex;padding-left:3%;padding-right:3%;-webkit-box-sizing:border-box;box-sizing:border-box}header .img{-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1;height:100%;width:75px;background-image:url("../img/white-logo.png");background-repeat:no-repeat}header nav{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center}header nav ul{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;margin:0;margin-left:0;padding-left:0;width:670px}header nav ul li{list-style-type:none;display:inline}header nav ul li a{text-decoration:none;color:white;font-family:"PT Sans Caption",sans-serif;font-weight:bold;font-size:16px}@media only screen and (max-width:890px){header nav{display:none}}main{height:100vh;width:100%;background-image:url("../img/background.png");background-repeat:no-repeat;background-size:cover;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:end;-ms-flex-align:end;align-items:flex-end;color:white;padding:5% 10%;-webkit-box-sizing:border-box;box-sizing:border-box}main .title{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;width:100%}main .title .tagline{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center}main .title .tagline .line{width:100px;height:2px;background-image:url("/img/main-line.svg");background-repeat:no-repeat;margin-right:25px}main .title .tagline span{font-family:"PT Sans Caption",sans-serif}main .title h1{margin:0;font-family:"Arsenal",sans-serif;font-weight:bold;font-size:92px;margin-bottom:150px}main .title .slider{display:-webkit-box;display:-ms-flexbox;display:flex;width:100%}main .title .slider div{-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1;padding-bottom:10px;border-bottom:1px solid white}main .title .slider div .number{font-family:"PT Sans",sans-serif;font-weight:bold;margin-right:20px}main .title .slider div .slider-title{font-family:"PT Sans",sans-serif;font-weight:bold}main .title .slider .not-chosen{opacity:0.5;font-weight:regular}main .title .arrow{position:relative;height:40px;width:30px;background-image:url("/img/main-arrow.svg");background-repeat:no-repeat;left:-6px;margin-top:35px}
+@import url("https://fonts.googleapis.com/css2?family=Arsenal:wght@400;700&family=PT+Sans+Caption:wght@400;700&family=PT+Sans:wght@400;700&display=swap");
+html, body {
+  height: 5000px;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  position: fixed;
+  height: 75px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 3%;
+  padding-right: 3%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+header .img {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  height: 100%;
+  width: 75px;
+  background-image: url("../img/white-logo.png");
+  background-repeat: no-repeat;
+}
+header nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+header nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0;
+  margin-left: 0;
+  padding-left: 0;
+  width: 670px;
+}
+header nav ul li {
+  list-style-type: none;
+  display: inline;
+}
+header nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-family: "PT Sans Caption", sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+}
+@media only screen and (max-width: 890px) {
+  header nav {
+    display: none;
+  }
+}
+
+main {
+  height: 100vh;
+  width: 100%;
+  background-image: url("../img/background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  color: white;
+  padding: 5% 10%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+main .title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+}
+main .title .tagline {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+main .title .tagline .line {
+  width: 100px;
+  height: 2px;
+  background-image: url("/img/main-line.svg");
+  background-repeat: no-repeat;
+  margin-right: 25px;
+}
+main .title .tagline span {
+  font-family: "PT Sans Caption", sans-serif;
+}
+main .title h1 {
+  margin: 0;
+  font-family: "Arsenal", sans-serif;
+  font-weight: bold;
+  font-size: 92px;
+  margin-bottom: 150px;
+}
+main .title .slider {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+main .title .slider div {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  padding-bottom: 10px;
+  border-bottom: 2px solid white;
+}
+main .title .slider div .number {
+  font-family: "PT Sans", sans-serif;
+  font-weight: bold;
+  margin-right: 20px;
+}
+main .title .slider div .slider-title {
+  font-family: "PT Sans", sans-serif;
+  font-weight: bold;
+}
+main .title .slider .not-chosen {
+  opacity: 0.5;
+  font-weight: regular;
+}
+main .title .arrow {
+  position: relative;
+  height: 40px;
+  width: 30px;
+  background-image: url("/img/main-arrow.svg");
+  background-repeat: no-repeat;
+  left: -6px;
+  margin-top: 35px;
+}
