@@ -811,6 +811,44 @@ main {
     }
 }
 
+
+.media-card {
+    width: 325px;
+    height: 240px;
+    padding: 30px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    border: rgba(0, 109, 180, 0.1) solid 2px;
+    background-image: linear-gradient(rgba(0, 109, 180, 0.1), rgba(0, 109, 180, 0));
+    .card-title {
+        flex-grow: 1;
+        font-family: 'PT Sans Narrow', sans-serif;
+        font-weight: bold;
+        font-size: 21px;
+        line-height: 22px;
+    }
+    .bottom {
+        display: flex;
+        justify-content: space-between;
+        flex-basis: 45px;
+        align-items: flex-end;
+        .logo {
+            height: 100%;
+            flex-basis: 38%;
+            background-image: url("../img/rbk.png");
+            background-position: bottom left;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+        .data {
+            font-family: 'PT Sans Caption', sans-serif;
+            opacity: .3;
+            font-size: 14px;
+        }
+    }
+}
+
 .media {
     .title {
         display: flex;
@@ -1121,4 +1159,9 @@ footer {
                     }
         }
     }
+}
+
+
+.owl-carousel {
+    margin-top: 40px;
 }
