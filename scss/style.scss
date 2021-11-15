@@ -25,6 +25,10 @@ p {
     margin-top: 20px;
     margin-left: 25%;
     margin-right: 5%;
+    a {
+        text-decoration: none;
+        color: #006DB4;
+    }
 }
 
 header {
@@ -273,7 +277,7 @@ main {
 .about {
     display: flex;
     transition: .5s;
-    @media only screen and (max-width: 1130px)  {
+    @media only screen and (max-width: 1530px)  {
         flex-direction: column;
         padding-left: 0;
     }
@@ -281,7 +285,7 @@ main {
     .article {
         flex-basis: 50%;
         margin-bottom: 160px;
-        @media only screen and (max-width: 1130px)  {
+        @media only screen and (max-width: 1530px)  {
             padding-left: 3%;
         }
         @media only screen and (max-width: 615px)  {
@@ -317,6 +321,10 @@ main {
         p {
             @media only screen and (max-width: 615px)  {
                 margin-left: 5%;
+            }
+            a {
+                text-decoration: none;
+                color: black;
             }
         }
     }
@@ -546,6 +554,11 @@ main {
     border: rgba(0, 0, 0, 0.5) 2px solid;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
+    &:hover {
+        background-color: #E61D25;
+        transition: 0.3s;
+      }
     @media only screen and (max-width: 840px)  {
         height: 60px;
         width: 255px;
@@ -640,8 +653,6 @@ main {
         flex-basis: 50%;
         .a {
             margin-bottom: 10px;
-        }
-        .b {
         }
     }
     .right-panel {
@@ -827,6 +838,16 @@ main {
         font-weight: bold;
         font-size: 21px;
         line-height: 22px;
+        text-decoration: none;
+        color: black;
+        a {
+            text-decoration: none;
+            color: black;
+        }
+    }
+    a {
+        text-decoration: none;
+        color: black;
     }
     .bottom {
         display: flex;
@@ -964,7 +985,7 @@ main {
         display: -ms-grid;
         display: grid;
         -ms-grid-columns: 100px 10px 100px 10px 100px;
-        grid-template-columns: 200px 200px 200px 200px;
+        grid-template-columns: 200px 200px 200px;
         grid-gap: 50px;
         background-color: #fff;
         color: #444;
@@ -1004,7 +1025,7 @@ main {
 
 footer {    
     .footer-desctop {
-        margin-top: 18%;
+        margin-top: 10%;
         height: 420px;
         @media only screen and (max-width: 1130px)  {
             height: 375px;
@@ -1164,4 +1185,10 @@ footer {
 
 .owl-carousel {
     margin-top: 40px;
+    .item {
+        a {
+            text-decoration: none;
+            color: black;
+        }
+    }
 }

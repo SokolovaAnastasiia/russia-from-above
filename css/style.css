@@ -25,6 +25,10 @@ p {
   margin-left: 25%;
   margin-right: 5%;
 }
+p a {
+  text-decoration: none;
+  color: #006DB4;
+}
 
 header {
   position: fixed;
@@ -348,7 +352,7 @@ main .title .arrow {
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
-@media only screen and (max-width: 1130px) {
+@media only screen and (max-width: 1530px) {
   .about {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -362,7 +366,7 @@ main .title .arrow {
       flex-basis: 50%;
   margin-bottom: 160px;
 }
-@media only screen and (max-width: 1130px) {
+@media only screen and (max-width: 1530px) {
   .about .article {
     padding-left: 3%;
   }
@@ -413,6 +417,10 @@ main .title .arrow {
   .about .article p {
     margin-left: 5%;
   }
+}
+.about .article p a {
+  text-decoration: none;
+  color: black;
 }
 .about .gallery {
   -ms-flex-preferred-size: 50%;
@@ -716,6 +724,12 @@ main .title .arrow {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  cursor: pointer;
+}
+.btn:hover {
+  background-color: #E61D25;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 @media only screen and (max-width: 840px) {
   .btn {
@@ -1087,6 +1101,16 @@ main .title .arrow {
   font-weight: bold;
   font-size: 21px;
   line-height: 22px;
+  text-decoration: none;
+  color: black;
+}
+.media-card .card-title a {
+  text-decoration: none;
+  color: black;
+}
+.media-card a {
+  text-decoration: none;
+  color: black;
 }
 .media-card .bottom {
   display: -webkit-box;
@@ -1269,7 +1293,7 @@ main .title .arrow {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 100px 10px 100px 10px 100px;
-  grid-template-columns: 200px 200px 200px 200px;
+  grid-template-columns: 200px 200px 200px;
   grid-gap: 50px;
   background-color: #fff;
   color: #444;
@@ -1323,7 +1347,7 @@ main .title .arrow {
 }
 
 footer .footer-desctop {
-  margin-top: 18%;
+  margin-top: 10%;
   height: 420px;
 }
 @media only screen and (max-width: 1130px) {
@@ -1509,4 +1533,8 @@ footer .footer-mobile .social-media a div {
 
 .owl-carousel {
   margin-top: 40px;
+}
+.owl-carousel .item a {
+  text-decoration: none;
+  color: black;
 }
