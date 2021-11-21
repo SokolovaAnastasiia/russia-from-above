@@ -5,6 +5,11 @@ html, body {
   font-size: 21px;
   -webkit-transition: 0.5s;
   transition: 0.5s;
+  background-color: white;
+}
+
+a {
+  text-decoration: none;
 }
 
 h2 {
@@ -31,6 +36,7 @@ p a {
 }
 
 header {
+  z-index: 2;
   position: fixed;
   height: 75px;
   width: 100%;
@@ -78,11 +84,11 @@ header nav ul {
   margin: 0;
   margin-left: 0;
   padding-left: 0;
-  width: 670px;
 }
 header nav ul li {
   list-style-type: none;
   display: inline;
+  margin-right: 30px;
 }
 header nav ul li a {
   text-decoration: none;
@@ -117,7 +123,7 @@ header .burger-btn {
   bottom: 0;
   left: 0;
   background-color: white;
-  z-index: 2;
+  z-index: 3;
   display: none;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -249,6 +255,11 @@ main .title .tagline .line {
 main .title .tagline span {
   font-family: "PT Sans Caption", sans-serif;
 }
+@media only screen and (max-width: 615px) {
+  main .title .tagline span {
+    font-size: 18px;
+  }
+}
 main .title h1 {
   margin: 0;
   font-family: "Arsenal", sans-serif;
@@ -352,7 +363,7 @@ main .title .arrow {
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
-@media only screen and (max-width: 1530px) {
+@media only screen and (max-width: 1130px) {
   .about {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -366,7 +377,7 @@ main .title .arrow {
       flex-basis: 50%;
   margin-bottom: 160px;
 }
-@media only screen and (max-width: 1530px) {
+@media only screen and (max-width: 1130px) {
   .about .article {
     padding-left: 3%;
   }
@@ -437,6 +448,11 @@ main .title .arrow {
     display: none;
   }
 }
+@media only screen and (max-width: 1130px) {
+  .about .gallery .outer {
+    padding-top: 64%;
+  }
+}
 .about .gallery .outer .inner {
   position: absolute;
   top: 0;
@@ -469,7 +485,12 @@ main .title .arrow {
   }
 }
 .about .gallery .outer .inner .pic1 .img-gallery {
-  background-image: url("../img/project-pic1.png");
+  background-image: url("../img/tver.jpg");
+}
+@media only screen and (max-width: 1130px) {
+  .about .gallery .outer .inner .pic1 {
+    display: none;
+  }
 }
 .about .gallery .outer .inner .pics {
   -ms-flex-preferred-size: 50%;
@@ -498,10 +519,16 @@ main .title .arrow {
   }
 }
 .about .gallery .outer .inner .pics .pic2 .img-gallery {
-  background-image: url("../img/project-pic2.png");
+  background-image: url("../img/altay.jpg");
 }
 .about .gallery .outer .inner .pics .pic3 .img-gallery {
-  background-image: url("../img/project-pic3.png");
+  background-image: url("../img/birds.jpg");
+}
+@media only screen and (max-width: 1130px) {
+  .about .gallery .outer .inner .pics {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
 }
 .about .gallery-mobile {
   display: none;
@@ -520,10 +547,13 @@ main .title .arrow {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  height: 290px;
+  height: 340px;
 }
 .about .gallery-mobile .pic1-mobile .img-gallery {
-  background-image: url("../img/project-pic1.png");
+  background-image: url("../img/altay.jpg");
+}
+.about .gallery-mobile .pic1-mobile .caption {
+  padding-left: 3%;
 }
 .about .gallery-mobile .pic2-mobile {
   display: -webkit-box;
@@ -533,11 +563,15 @@ main .title .arrow {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  height: 560px;
+  height: 340px;
 }
 .about .gallery-mobile .pic2-mobile .img-gallery {
-  background-image: url("../img/project-pic3.png");
+  background-image: url("../img/birds.jpg");
 }
+.about .gallery-mobile .pic2-mobile .caption {
+  padding-left: 3%;
+}
+
 .creator {
   margin-top: 90px;
   display: -webkit-box;
@@ -633,7 +667,8 @@ main .title .arrow {
   }
 }
 .creator .creator-photo .img-gallery {
-  background-image: url("../img/creator.png");
+  background-image: url("../img/creator.jpg");
+  background-position: right center;
 }
 .creator .creator-photo-mobile {
   display: none;
@@ -655,7 +690,135 @@ main .title .arrow {
   height: 390px;
 }
 .creator .creator-photo-mobile .pic1-mobile .img-gallery {
-  background-image: url("../img/creator.png");
+  background-image: url("../img/creator.jpg");
+  background-position: right center;
+}
+.creator .creator-photo-mobile .pic1-mobile .caption {
+  padding-left: 3%;
+}
+
+.from-author {
+  margin-top: 90px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+@media only screen and (max-width: 1130px) {
+  .from-author {
+    display: block;
+  }
+}
+.from-author .article {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+  margin-bottom: 160px;
+}
+@media only screen and (max-width: 1130px) {
+  .from-author .article {
+    padding-left: 3%;
+  }
+}
+@media only screen and (max-width: 615px) {
+  .from-author .article {
+    padding-left: 0;
+  }
+}
+.from-author .article .title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+@media only screen and (max-width: 615px) {
+  .from-author .article .title {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+}
+.from-author .article .title .line {
+  border-bottom: 2px black solid;
+  width: 16%;
+  height: 5px;
+  position: relative;
+  bottom: 5px;
+}
+.from-author .article .title h2 {
+  margin-top: 0px;
+}
+@media only screen and (max-width: 615px) {
+  .from-author .article .title h2 {
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+  }
+}
+.from-author .article .title .line2 {
+  display: none;
+}
+@media only screen and (max-width: 615px) {
+  .from-author .article .title .line2 {
+    display: block;
+    float: right;
+  }
+}
+@media only screen and (max-width: 615px) {
+  .from-author .article p {
+    margin-left: 5%;
+  }
+}
+.from-author .from-creator-photo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 500px;
+}
+@media only screen and (max-width: 1130px) {
+  .from-author .from-creator-photo {
+    display: none;
+  }
+}
+@media only screen and (max-width: 1130px) {
+  .from-author .from-creator-photo .caption {
+    padding-left: 3%;
+  }
+}
+.from-author .from-creator-photo .img-gallery {
+  background-image: url("../img/pattern.jpg");
+  max-height: 641px;
+}
+.from-author .from-creator-photo-mobile {
+  display: none;
+  width: 100%;
+}
+@media only screen and (max-width: 1130px) {
+  .from-author .from-creator-photo-mobile {
+    display: block;
+  }
+}
+.from-author .from-creator-photo-mobile .pic1-mobile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 390px;
+}
+.from-author .from-creator-photo-mobile .pic1-mobile .img-gallery {
+  background-image: url("../img/pattern.jpg");
+}
+.from-author .from-creator-photo-mobile .pic1-mobile .caption {
+  padding-left: 3%;
 }
 
 .important-thoungt {
@@ -691,12 +854,12 @@ main .title .arrow {
 }
 .important-thoungt div span {
   font-family: "Arsenal", sans-serif;
-  font-size: 64px;
+  font-size: 48px;
   font-weight: bold;
 }
 @media only screen and (max-width: 1130px) {
   .important-thoungt div span {
-    font-size: 48px;
+    font-size: 35px;
   }
 }
 @media only screen and (max-width: 615px) {
@@ -726,6 +889,9 @@ main .title .arrow {
           align-items: center;
   cursor: pointer;
 }
+.btn a {
+  text-decoration: none;
+}
 .btn:hover {
   background-color: #E61D25;
   -webkit-transition: 0.3s;
@@ -741,6 +907,8 @@ main .title .arrow {
   font-family: "PT Sans", sans-serif;
   font-weight: bold;
   font-size: 21px;
+  text-decoration: none;
+  color: black;
 }
 @media only screen and (max-width: 840px) {
   .btn span {
@@ -787,6 +955,12 @@ main .title .arrow {
   font-size: 21px;
   -webkit-text-decoration: underline #006DB4;
           text-decoration: underline #006DB4;
+  text-transform: uppercase;
+  color: black;
+}
+.one-news .news-title a {
+  text-decoration: none;
+  color: black;
 }
 
 .a {
@@ -819,6 +993,9 @@ main .title .arrow {
   background-size: cover;
   background-position: bottom center;
   padding: 25px;
+}
+.travel a, .travel-tablet a {
+  color: white;
 }
 .travel .hash, .travel-tablet .hash {
   color: rgba(255, 255, 255, 0.5);
@@ -970,8 +1147,9 @@ main .title .arrow {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 @media only screen and (max-width: 618px) {
   .news-tablet .news .news-list {
@@ -1002,6 +1180,8 @@ main .title .arrow {
 }
 .news-tablet .news .btn {
   margin: 0 auto;
+  text-decoration: none;
+  color: black;
 }
 
 .travel-tablet {
@@ -1252,6 +1432,94 @@ main .title .arrow {
   padding-top: 175px;
 }
 
+.general-partner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+@media only screen and (max-width: 1130px) {
+  .general-partner {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+.general-partner .article {
+  -ms-flex-preferred-size: 70%;
+      flex-basis: 70%;
+}
+.general-partner .article .title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+@media only screen and (max-width: 615px) {
+  .general-partner .article .title {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+}
+.general-partner .article .title .line {
+  border-bottom: 2px black solid;
+  width: 8%;
+  height: 5px;
+  position: relative;
+  bottom: 5px;
+}
+@media only screen and (max-width: 615px) {
+  .general-partner .article .title h2 {
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+  }
+}
+.general-partner .article .title .line2 {
+  display: none;
+}
+@media only screen and (max-width: 615px) {
+  .general-partner .article .title .line2 {
+    display: block;
+    float: right;
+  }
+}
+.general-partner .article p {
+  margin-left: 25%;
+}
+@media only screen and (max-width: 615px) {
+  .general-partner .article p {
+    margin-left: 5%;
+  }
+}
+.general-partner .article p a {
+  text-decoration: none;
+  color: black;
+}
+.general-partner .partner-logo {
+  -ms-flex-preferred-size: 30%;
+      flex-basis: 30%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.general-partner .partner-logo div {
+  height: 75px;
+  width: 200px;
+  background-image: url("../img/sponsors/baltic.gif");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
 .support .title {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1346,6 +1614,11 @@ main .title .arrow {
   margin-bottom: 10px;
 }
 
+.resourses {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
 footer .footer-desctop {
   margin-top: 10%;
   height: 420px;
@@ -1417,10 +1690,21 @@ footer .footer-desctop .footer-columns div ul {
 footer .footer-desctop .footer-columns div ul li {
   list-style: none;
   height: 45px;
+  color: black;
+  font-family: "PT Sans Caption", sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+  text-transform: uppercase;
 }
 @media only screen and (max-width: 1130px) {
   footer .footer-desctop .footer-columns div ul li {
     height: 35px;
+  }
+}
+@media only screen and (max-width: 1130px) {
+  footer .footer-desctop .footer-columns div ul li {
+    font-size: 14px;
+    color: rgba(0, 26, 42, 0.5);
   }
 }
 footer .footer-desctop .footer-columns div ul li a {
@@ -1496,6 +1780,11 @@ footer .footer-mobile .chapter ul {
   padding-left: 0;
   margin-top: 10px;
   margin-bottom: 30px;
+  color: rgba(0, 26, 42, 0.5);
+  font-family: "PT Sans Caption", sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+  text-transform: uppercase;
 }
 footer .footer-mobile .chapter ul li {
   list-style: none;

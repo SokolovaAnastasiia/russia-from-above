@@ -7,6 +7,11 @@ $(document).ready(function(){
     $('.burger-btn').click(function(){
         $('.menu').css('display', 'flex')
     })
+
+    $('.menu nav ul li a').click(function(){
+        $('.menu').css('display', 'none')
+        
+    })
   
     $('.owl-carousel').owlCarousel({
         loop:true,

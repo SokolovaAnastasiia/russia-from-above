@@ -6,6 +6,11 @@ html, body {
     padding: 0;
     font-size: 21px;
     transition: .5s;
+    background-color: white;
+}
+
+a {
+    text-decoration: none;
 }
 
 h2 {
@@ -32,6 +37,7 @@ p {
 }
 
 header {
+    z-index: 2;
     position: fixed;
     height: 75px;
     width: 100%;
@@ -62,10 +68,10 @@ header {
             margin: 0;
             margin-left: 0;
             padding-left: 0;
-            width: 670px;
             li {
                 list-style-type: none;
                 display:inline;
+                margin-right: 30px;
                 a {
                     text-decoration: none;
                     color: white;
@@ -99,7 +105,7 @@ header {
     bottom: 0;
     left: 0;
     background-color: white;
-    z-index: 2;
+    z-index: 3;
     display: none;
     flex-direction: column;
     .menu-header {
@@ -187,6 +193,9 @@ main {
             }
             span {
                 font-family: 'PT Sans Caption', sans-serif;
+                @media only screen and (max-width: 615px)  {
+                    font-size: 18px;
+                }
             }
         }
         h1 {
@@ -277,7 +286,7 @@ main {
 .about {
     display: flex;
     transition: .5s;
-    @media only screen and (max-width: 1530px)  {
+    @media only screen and (max-width: 1130px)  {
         flex-direction: column;
         padding-left: 0;
     }
@@ -285,7 +294,7 @@ main {
     .article {
         flex-basis: 50%;
         margin-bottom: 160px;
-        @media only screen and (max-width: 1530px)  {
+        @media only screen and (max-width: 1130px)  {
             padding-left: 3%;
         }
         @media only screen and (max-width: 615px)  {
@@ -339,6 +348,9 @@ main {
             @media only screen and (max-width: 615px)  {
                 display: none;
             }
+            @media only screen and (max-width: 1130px)  {
+                padding-top: 64%;
+            }
             .inner {
                 position: absolute;
                 top: 0;
@@ -358,7 +370,10 @@ main {
                         }
                     }
                     .img-gallery {
-                        background-image: url("../img/project-pic1.png");
+                        background-image: url("../img/tver.jpg");
+                    }
+                    @media only screen and (max-width: 1130px)  {
+                        display: none;
                     }
                 }
                 .pics {
@@ -377,14 +392,17 @@ main {
                             }
                         }
                         .img-gallery {
-                            background-image: url("../img/project-pic2.png");
+                            background-image: url("../img/altay.jpg");
                             
                         }
                     }
                     .pic3 {
                         .img-gallery {
-                            background-image: url("../img/project-pic3.png");
+                            background-image: url("../img/birds.jpg");
                         }
+                    }
+                    @media only screen and (max-width: 1130px)  {
+                        flex-basis: 100%;
                     }
                 }
             }
@@ -393,29 +411,30 @@ main {
     .gallery-mobile {
         display: none;
         width: 100%;
+        
         @media only screen and (max-width: 615px)  {
             display: block;
         }
         .pic1-mobile {
             display: flex;
             flex-direction: column;
-            height: 290px;
+            height: 340px;
             .img-gallery {
-                background-image: url("../img/project-pic1.png");
+                background-image: url("../img/altay.jpg");
             }
             .caption {
-
+                padding-left: 3%;
             }
         }
         .pic2-mobile {
             display: flex;
             flex-direction: column;
-            height: 560px;
+            height: 340px;
             .img-gallery {
-                background-image: url("../img/project-pic3.png");
+                background-image: url("../img/birds.jpg");
             }
             .caption {
-                
+                padding-left: 3%;
             }
         }
     }
@@ -485,7 +504,8 @@ main {
             }
         }
         .img-gallery {
-            background-image: url("../img/creator.png");
+            background-image: url("../img/creator.jpg");
+            background-position: right center;
         }
     }
 
@@ -500,11 +520,105 @@ main {
             flex-direction: column;
             height: 390px;
             .img-gallery {
-                background-image: url("../img/creator.png");
+                background-image: url("../img/creator.jpg");
+                background-position: right center;
+            }
+            .caption {
+                padding-left: 3%;
             }
         }
     }
 }
+
+.from-author {
+    margin-top: 90px;
+    display: flex;
+    @media only screen and (max-width: 1130px)  {
+        display: block;
+    }
+    .article {
+        flex-basis: 50%;
+        margin-bottom: 160px;
+        @media only screen and (max-width: 1130px)  {
+            padding-left: 3%;
+        }
+        @media only screen and (max-width: 615px)  {
+            padding-left: 0;
+        }
+        .title {
+            display: flex;
+            align-items: flex-end;
+            @media only screen and (max-width: 615px)  {
+                width: 100%;
+                margin-bottom: 40px;
+            }
+            .line {
+                border-bottom: 2px black solid;
+                width: 16%;
+                height: 5px;
+                position: relative;
+                bottom: 5px;
+            }
+            h2 {
+                margin-top: 0px;
+                @media only screen and (max-width: 615px)  {
+                    flex-grow: 1;
+                }
+            }
+            .line2 {
+                display: none;
+                @media only screen and (max-width: 615px)  {
+                    display: block;
+                    float: right;
+                }
+            }
+        }
+        p {
+            @media only screen and (max-width: 615px)  {
+                margin-left: 5%;
+            }
+        }
+    }
+    .from-creator-photo {
+        display: flex;
+        flex-basis: 50%;
+        display: flex;
+        flex-direction: column;
+        min-height: 500px;
+        @media only screen and (max-width: 1130px)  {
+            display: none;
+        }
+        .caption {
+            @media only screen and (max-width: 1130px)  {
+                padding-left: 3%;
+            }
+        }
+        .img-gallery {
+            background-image: url("../img/pattern.jpg");
+            max-height: 641px;
+        }
+    }
+
+    .from-creator-photo-mobile {
+        display: none;
+        width: 100%;
+        @media only screen and (max-width: 1130px)  {
+            display: block;
+        }
+        .pic1-mobile {
+            display: flex;
+            flex-direction: column;
+            height: 390px;
+            .img-gallery {
+                background-image: url("../img/pattern.jpg");
+            }
+            .caption {
+                padding-left: 3%;
+            }
+        }
+    }
+}
+
 
 .important-thoungt {
     margin-top: 40px;
@@ -527,10 +641,10 @@ main {
         width: 70%;
         span {
             font-family: 'Arsenal', sans-serif;
-            font-size: 64px;
+            font-size: 48px;
             font-weight: bold;
             @media only screen and (max-width: 1130px)  {
-                font-size: 48px;
+                font-size: 35px;
             }
             @media only screen and (max-width: 615px)  {
                 font-size: 28px;
@@ -555,6 +669,9 @@ main {
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    a {
+        text-decoration: none;
+    }
     &:hover {
         background-color: #E61D25;
         transition: 0.3s;
@@ -570,6 +687,8 @@ main {
         @media only screen and (max-width: 840px)  {
             font-size: 18px;
         }
+        text-decoration: none;
+        color: black;
     }
 }
 
@@ -606,6 +725,12 @@ main {
         font-weight: bold;
         font-size: 21px;
         text-decoration: underline #006DB4;
+        text-transform: uppercase;
+        color: black;
+        a {
+            text-decoration: none;
+            color: black;
+        }
     }
 }
 
@@ -628,6 +753,9 @@ main {
         background-size: cover;
         background-position: bottom center;
         padding: 25px;
+    }
+    a {
+        color: white;
     }
     .hash {
         color: rgba(255, 255, 255, 0.5);
@@ -745,7 +873,7 @@ main {
             width: 100%;
             margin-top: 30px;
             display: flex;
-            justify-content: space-around;
+            justify-content: space-evenly;
             @media only screen and (max-width: 618px)  {
                 flex-direction: column;
                 justify-content: start;
@@ -767,7 +895,11 @@ main {
         }
         .btn {
             margin: 0 auto;
+            text-decoration: none;
+            color: black;
+            
         }
+        
     }
 }
 
@@ -952,6 +1084,69 @@ main {
 }
 
 
+.general-partner {
+    display: flex;
+    @media only screen and (max-width: 1130px)  {
+        flex-direction: column;
+    }
+    .article {
+        flex-basis: 70%;
+        .title {
+            display: flex;
+            align-items: flex-end;
+            @media only screen and (max-width: 615px)  {
+                width: 100%;
+                margin-bottom: 40px;
+            }
+            .line {
+                border-bottom: 2px black solid;
+                width: 8%;
+                height: 5px;
+                position: relative;
+                bottom: 5px;
+            }
+            h2 {
+                @media only screen and (max-width: 615px)  {
+                    flex-grow: 1;
+                }
+            }
+            .line2 {
+                display: none;
+                @media only screen and (max-width: 615px)  {
+                    display: block;
+                    float: right;
+                }
+            }
+        }
+        p {
+            margin-left: 25%;
+            @media only screen and (max-width: 615px)  {
+                margin-left: 5%;
+            }
+            a {
+                text-decoration: none;
+                color: black;
+            }
+        }
+    }
+    
+    .partner-logo {
+        flex-basis: 30%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        div {
+            height: 75px;
+            width: 200px;
+            background-image: url("../img/sponsors/baltic.gif");
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+        }
+        
+    }
+}
+
 
 .support {
     .title {
@@ -1023,6 +1218,11 @@ main {
     }
 }
 
+.resourses {
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+
 footer {    
     .footer-desctop {
         margin-top: 10%;
@@ -1062,6 +1262,7 @@ footer {
             @media only screen and (max-width: 1130px)  {
                 margin-top: 10px;
             }
+            
             div {
                 flex-basis: 24%;
                 ul {
@@ -1072,6 +1273,15 @@ footer {
                         @media only screen and (max-width: 1130px)  {
                             height: 35px;
                         }
+                        color: black;
+                            font-family: 'PT Sans Caption', sans-serif;
+                            font-weight: bold;
+                            font-size: 18px;
+                            text-transform: uppercase;
+                            @media only screen and (max-width: 1130px)  {
+                                font-size: 14px;
+                                color: rgba(0, 26, 42, 0.5);
+                            }
                         a {
                             text-decoration: none;
                             color: black;
@@ -1146,6 +1356,11 @@ footer {
                 padding-left: 0;
                 margin-top: 10px;
                 margin-bottom: 30px;
+                color: rgba(0, 26, 42, 0.5);
+                        font-family: 'PT Sans Caption', sans-serif;
+                        font-weight: bold;
+                        font-size: 14px;
+                        text-transform: uppercase;
                 li {
                     list-style: none;
                     height: 25px;
