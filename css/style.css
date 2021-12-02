@@ -116,6 +116,29 @@ header .burger-btn {
   }
 }
 
+.dark {
+  background-color: white;
+  color: black;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.16);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.16);
+}
+.dark .img {
+  background-image: url("../img/colored-logo.png");
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  height: 100%;
+  width: 75px;
+  background-repeat: no-repeat;
+  background-position: left;
+}
+.dark .burger-btn {
+  background-image: url("../img/black-burger.svg");
+}
+.dark a {
+  color: black;
+}
+
 .menu {
   position: fixed;
   top: 0;
@@ -195,7 +218,7 @@ header .burger-btn {
 main {
   height: 100vh;
   width: 100%;
-  background-image: url("../img/background.png");
+  background-image: url("../img/background2.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   display: -webkit-box;
@@ -453,6 +476,11 @@ main .title .arrow {
     padding-top: 64%;
   }
 }
+@media only screen and (min-width: 1130px) {
+  .about .gallery .outer {
+    padding-top: 90%;
+  }
+}
 .about .gallery .outer .inner {
   position: absolute;
   top: 0;
@@ -467,6 +495,7 @@ main .title .arrow {
       -ms-flex-direction: column;
           flex-direction: column;
   padding-top: 3%;
+  max-height: 1000px;
 }
 .about .gallery .outer .inner .pic1 {
   -ms-flex-preferred-size: 50%;
@@ -492,12 +521,25 @@ main .title .arrow {
     display: none;
   }
 }
+@media only screen and (min-width: 1130px) {
+  .about .gallery .outer .inner .pic1 {
+    -ms-flex-preferred-size: 80%;
+        flex-basis: 80%;
+  }
+}
 .about .gallery .outer .inner .pics {
   -ms-flex-preferred-size: 50%;
       flex-basis: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+@media only screen and (min-width: 1130px) {
+  .about .gallery .outer .inner .pics {
+    display: none;
+    -ms-flex-preferred-size: 0;
+        flex-basis: 0;
+  }
 }
 .about .gallery .outer .inner .pics .pic {
   display: -webkit-box;
@@ -573,7 +615,7 @@ main .title .arrow {
 }
 
 .creator {
-  margin-top: 90px;
+  margin-top: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1087,6 +1129,7 @@ main .title .arrow {
   margin-top: 40px;
   margin-left: 20px;
   margin-right: 40px;
+  max-width: 1100px;
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;

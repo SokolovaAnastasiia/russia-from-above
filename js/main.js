@@ -30,5 +30,10 @@ $(document).ready(function(){
         }
     })
 
+    $(window).scroll(function(){
+          
+        $('header').toggleClass('dark', $(this).scrollTop() > (window.screen.height - 200));
+    });
+
 
 });
