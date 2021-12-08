@@ -1051,6 +1051,7 @@ main .title .arrow {
   color: white;
 }
 .travel .travel-caption, .travel-tablet .travel-caption {
+  display: none;
   font-family: "PT Sans Caption", sans-serif;
   font-weight: bold;
   font-size: 14px;
